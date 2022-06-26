@@ -7,7 +7,7 @@ def create_model(x_train, x_test, classes, trainable_encoder=False):
 
     x = tf.keras.layers.Input(shape=input_shape, name='input')
 
-    backbone = tf.keras.applications.ResNet101V2(include_top=False, weights='imagenet',
+    backbone = tf.keras.applications.ResNet50V2(include_top=False, weights='imagenet',
                                                 input_tensor=x, pooling='avg', classes=classes)
 
     if not trainable_encoder:

@@ -59,15 +59,13 @@ path = os.path.join(TMP_PATH, 'trained_model.h5')
 model.save(path, include_optimizer=False)
 
 plt.clf()
-plt.plot(hist.history['loss'], label="loss")
-plt.plot(hist.history['val_loss'], label="val_loss")
-plt.legend()
+plt.plot(hist.history['loss'])
+plt.plot(hist.history['val_loss'])
 plt.savefig(os.path.join(TMP_PATH, 'training_loss.png'))
 
 plt.clf()
-plt.plot(hist.history['sparse_categorical_accuracy'], label="accuracy")
-plt.plot(hist.history['val_sparse_categorical_accuracy'], label="val_accuracy")
-plt.legend()
+plt.plot(hist.history['sparse_categorical_accuracy'])
+plt.plot(hist.history['val_sparse_categorical_accuracy'])
 plt.savefig(os.path.join(TMP_PATH, 'training_accuracy.png'))
 
 
