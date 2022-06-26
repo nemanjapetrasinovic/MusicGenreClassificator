@@ -2,7 +2,6 @@ import matplotlib
 from tensorflow.core.framework.dataset_options_pb2 import AUTO
 from model import *
 import model_resnet as modelres
-import model as modelcnn
 import model_new as model_new_cnn
 import tensorflow as tf
 from data import *
